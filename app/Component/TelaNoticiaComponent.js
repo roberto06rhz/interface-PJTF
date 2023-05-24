@@ -1,15 +1,41 @@
-import { Text, TextInput, View, Searchbar } from "react-native";
-import React from "react";
+import { Text, TextInput, View, StyleSheet } from "react-native";
+import React, { useState } from 'react';
+
+
+
 
 const TelaNoticiaComponent = () => {
+    const [pesquisa, setpesquisa] = useState('');
+
     return (
         <View>
-            <label>
-                <input name="pesquisa" type="search" />
-            </label>
-            <Text>oiebbb</Text>
+
+            <View style={estilo.pesquisacorp}>
+            <TextInput style={estilo.pesquisa} 
+            placeholder="pesquise"
+            onChangeText={(text) => setpesquisa(text)}
+            defaultValue={pesquisa}>
+            </TextInput>
+            </View>
+            
         </View>
     )
 }
+
+const estilo = StyleSheet.create({
+
+    pesquisa:{
+        textAlign:'center',
+        border:'none',
+        width:"100%",
+        height:"37%",
+        backgroundColor:"rgb(211,211,211)"
+    },
+
+    pesquisacorp:{
+       
+    }
+
+})
 
 export default TelaNoticiaComponent

@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import TelaPrincipalComponent from './Component/TelaPricipalComponent';
-import TelaLoginComponent from './Component/TelaLoginComponent';
-import TelaCadastroComponent from './Component/TelacadastroComponet';
-import TelaNoticiaComponent from './Component/TelaNoticiaComponent';
+import TelaPrincipalComponent from './Component/TelaPrincipal/TelaPricipalComponent'
+import TelaLoginComponent from './Component/TelaLogin/TelaLoginComponent';
+import TelaCadastroComponent from './Component/TelaCadastro/TelacadastroComponet';
+import TelaNoticiaComponent from './Component/TelaNoticia/TelaNoticiaComponent';
 
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -14,9 +14,6 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-
-  
-   
        <NavigationContainer>
         <Stack.Navigator inicialRouterName = "">
            <Stack.Screen name = "PROCURALITICO" component = {TelaPrincipalComponent} options={{headerShown:false}}/>
@@ -26,15 +23,5 @@ export default function App() {
            
         </Stack.Navigator>
        </NavigationContainer>
-  
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

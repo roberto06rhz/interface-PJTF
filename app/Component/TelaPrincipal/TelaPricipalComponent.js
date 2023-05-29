@@ -69,12 +69,5 @@ const estilo = StyleSheet.create({
    marginBottom: 10,
 
  }
-
-
-
-
-
-
 })
-
 export default TelaPrincipalComponent

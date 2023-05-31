@@ -82,6 +82,7 @@ const estilo = StyleSheet.create({
       fontWeight: 'bold',
       textAlign: 'center',
       marginBottom: 10,
+      margin:13
 
    }
 })

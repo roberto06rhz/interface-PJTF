@@ -31,7 +31,7 @@ const TelaCadastroComponent = ({ navigation }) => {
                             </View>
 
                         <View style={estilo.emailSenha}>
-                            <Text style={estilo.title}>COMFIRME A SENHA</Text>
+                            <Text style={estilo.title}>CONFIRME A SENHA</Text>
                             <TextInput
                                 placeholder="Repita a senha"
                                 onChangeText={(texto) => setSenhaOk(texto)}
@@ -58,7 +58,11 @@ const estilo = StyleSheet.create({
     dados: {
         backgroundColor: 'white',
         height: '55%',
-        width: '100%',
+        width: '96%',
+        marginLeft: 8
+        
+        
+        
         
 
     },
@@ -68,7 +72,8 @@ const estilo = StyleSheet.create({
         color: 'black',
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 10,
+        marginBottom: 15,
+        margin:13
 
     },
 
@@ -77,13 +82,14 @@ const estilo = StyleSheet.create({
         color: 'black',
         fontSize: 20,
         fontWeight: 'bold',
-        marginTop: 28
+        marginTop: 28,
+        margin:13
     },
 
     emailSenha: {
         borderBottomWidth: 2,
         height: 85,
-        
+        marginLeft:10,
         fontSize: 16,
         
 

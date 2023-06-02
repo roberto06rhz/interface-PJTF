@@ -16,10 +16,10 @@ export default function App() {
   return (
        <NavigationContainer>
         <Stack.Navigator inicialRouterName = "">
-           <Stack.Screen name = "PROCURALITICO" component = {TelaPrincipalComponent} options={{headerShown:false}}/>
-           <Stack.Screen name = "login" component = {TelaLoginComponent} />
+           <Stack.Screen name = "PROCURALITICO" component = {TelaLoginComponent} options={{headerShown:false}}/>
            <Stack.Screen name = "cadastro" component = {TelaCadastroComponent} />
            <Stack.Screen name = "entrarVisitante" component = {TelaNoticiaComponent} />
+           
            
         </Stack.Navigator>
        </NavigationContainer>

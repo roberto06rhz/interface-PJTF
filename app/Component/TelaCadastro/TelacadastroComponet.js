@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { View, TextInput, Text, StyleSheet } from "react-native";
-import { Button } from "react-native-paper";
+import { View, TextInput, Text, StyleSheet,TouchableOpacity } from "react-native";
+
 
 const TelaCadastroComponent = ({ navigation }) => {
     const [email, setEmail] = useState('')
@@ -39,7 +39,9 @@ const TelaCadastroComponent = ({ navigation }) => {
                             </TextInput>
                             </View>
 
-                        <Button onPress={() => navigation.navigate("login")}>Iniciar sessão</Button>
+                        <TouchableOpacity style onPress={() => navigation.navigate("login")}>
+                        <Text style={estilo.butao}>Iniciar Sessão</Text>
+                        </TouchableOpacity>
                    
                 
             </View>

@@ -36,7 +36,6 @@ const TelaPrincipalComponent = ({ navigation }) => {
 
    )
 }
-
 const estilo = StyleSheet.create({
    conteiner: {
       flex: 1,
@@ -60,9 +59,6 @@ const estilo = StyleSheet.create({
       alignItems: 'center',
       Color: 'white',
       marginVertical:3,
-   
-
-
    },
 
    butaoCotainer: {

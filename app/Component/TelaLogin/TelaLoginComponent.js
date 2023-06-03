@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SafeAreaView, View, TextInput, Text, StyleSheet, TouchableOpacity } from "react-native";
+import {  View, TextInput, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const TelaLoginComponent = ({ navigation }) => {
     const [email, setEmail] = useState('');

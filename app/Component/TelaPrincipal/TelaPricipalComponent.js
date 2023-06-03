@@ -1,4 +1,4 @@
-import { View, StyleSheet} from "react-native";
+import { View, StyleSheet } from "react-native";
 import { Text, Button } from "react-native-paper";
 
 const TelaPrincipalComponent = ({ navigation }) => {
@@ -12,12 +12,21 @@ const TelaPrincipalComponent = ({ navigation }) => {
             </View>
 
             <View style={estilo.butaoCotainer}>
+               <View >
+
                <View style={estilo.butao}>
-                  <Button onPress={() => navigation.navigate("cadastro")}>Criar uma conta</Button>
 
-                  <Button onPress={() => navigation.navigate("login")}>Entrar com uma conta</Button> 
+                  <Button textColor="white" mode onPress={() => navigation.navigate("cadastro")}>Criar uma conta</Button>
+               </View>
 
-                  <Button onPress={() => navigation.navigate("entrarVisitante")}>Entrar como visitante</Button>
+                  <View style={estilo.butao}>
+                  <Button textColor="white" onPress={() => navigation.navigate("login")}>Entrar com uma conta</Button>
+
+                  </View>
+
+                  <View style={estilo.butao}>
+                     <Button mode="container" textColor="white" onPress={() => navigation.navigate("entrarVisitante")}>Entrar como visitante</Button>
+                  </View>
                </View>
             </View>
 
@@ -27,40 +36,42 @@ const TelaPrincipalComponent = ({ navigation }) => {
 
    )
 }
-
 const estilo = StyleSheet.create({
    conteiner: {
       flex: 1,
       backgroundColor: '#DCDCDC',
       justifyContent: 'center',
+
    },
    info: {
       backgroundColor: 'white',
-      height: '42%',
+      height: '50%',
       width: '100%',
-      justifyContent: 'center',
       alignItems: 'center',
-      
+
+
    },
 
    butao: {
       backgroundColor: '#19A7CE',
       padding: 10,
       width: '100%',
-      justifyContent: 'center',
       alignItems: 'center',
+      Color: 'white',
+      marginVertical:3,
    },
 
-   butaoCotainer:{
+   butaoCotainer: {
       width: '100%',
-      flex:2,
-      gap:10
-   
+      flex: 2,
+
    },
+
    logo: {
-      flex:1,
-      
+      flex: 1,
+
    },
+<<<<<<< HEAD
  titulo:{
    fontSize: 30,
    color: 'black',
@@ -69,5 +80,17 @@ const estilo = StyleSheet.create({
    marginBottom: 10,
 
  }
+=======
+
+   titulo: {
+      fontSize: 30,
+      color: 'black',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginBottom: 10,
+      margin:13
+
+   }
+>>>>>>> main
 })
 export default TelaPrincipalComponent

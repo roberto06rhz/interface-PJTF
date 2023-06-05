@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { FlatList, View } from "react-native";
+import { FlatList, View, Pressable } from "react-native";
 import { Avatar, List, TextInput } from "react-native-paper";
 
-const TelaPoliticos = () => {
+const TelaPoliticos = ({ navigation }) => {
   const [politicos, setPoliticos] = useState([]);
   const [politicoFiltrado, setPoliticoFiltrado] = useState([]);
   const [text, setText] = useState("");
@@ -37,11 +37,15 @@ const TelaPoliticos = () => {
           data={politicoFiltrado}
           keyExtractor={({ id }) => id}
           renderItem={({ item }) => (
-            <List.Item
-              title={item.nome}
-              description={item.siglaPartido}
-              left={(props) => <Avatar.Image source={{ uri: item.urlFoto }} />}
-            />
+            <Pressable onPress={() => {navigation.navigate('telaPolitico', {
+              chaveValor: item
+            })}}>
+              <List.Item
+                title={item.nome}
+                description={item.siglaPartido}
+                left={(props) => <Avatar.Image source={{ uri: item.urlFoto }} />}
+              />
+            </Pressable>
           )}
         />
       );

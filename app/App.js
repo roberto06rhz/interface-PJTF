@@ -20,9 +20,9 @@ export default function App() {
           component={TelaLoginComponent}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="cadastro" component={TelaCadastroComponent} />
+        <Stack.Screen name="Cadastro" component={TelaCadastroComponent} />
         <Stack.Screen name="entrarVisitante" component={TelaPoliticos} />
-        <Stack.Screen name="telaPolitico" component={TelaPolitico}/>
+        <Stack.Screen name="telapolitico" component={TelaPolitico}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

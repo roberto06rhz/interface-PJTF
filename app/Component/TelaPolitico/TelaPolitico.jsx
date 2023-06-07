@@ -35,12 +35,14 @@ const TelaPolitico = ({ route }) => {
         const json = await response.json();
         //console.log(json.dados);
         setData(json.dados);
+        
       } catch (error) {
-        /* console.error(error); */
+        console.error(error)
       }
     })();
   }, []);
-
+  console.log(data)
+  
   return (
     <View style={{ flex: 1 }}>
       <View style={{ height: 450, width: 414 }}>
@@ -75,7 +77,10 @@ const TelaPolitico = ({ route }) => {
           {data.map((despesa, i) => (
             <View key={i}>
               <Text>
-                Ano: {despesa.ano} mes: {despesa.mes}
+                Tipo: {despesa.tipoDespesa}
+              </Text>
+              <Text>
+                Ano: {despesa.ano} mes: {despesa.mes} gasto: {despesa.valorDocumento}
               </Text>
             </View>
           ))}
@@ -90,5 +95,8 @@ const style = StyleSheet.create({
     height: "100%",
     objectFit: "contain",
   },
+  content:{
+    width: 800
+  }
 });
 export default TelaPolitico;

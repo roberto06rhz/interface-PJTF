@@ -42,7 +42,7 @@ const TelaLoginComponent = ({ navigation }) => {
                 </TextInput>
 
                 <View style={estilo.entraVisitCriar}>
-                    <TouchableOpacity onPress={() => navigation.navigate("entrarVisitante")}>
+                    <TouchableOpacity onPress={() => navigation.navigate("telaPoliticos")}>
                         <Text style={estilo.entrarVstt}>Entrar como visitante</Text>
                     </TouchableOpacity>
 
@@ -52,7 +52,7 @@ const TelaLoginComponent = ({ navigation }) => {
                 </View>
 
             </View>
-            <TouchableOpacity style={estilo.bordaButao} onPress={() => navigation.navigate("telapolitico")}>
+            <TouchableOpacity style={estilo.bordaButao} onPress={() => navigation.navigate("telaPoliticos")}>
                 <Text style={estilo.butao}>LOGIN</Text>
             </TouchableOpacity>
 

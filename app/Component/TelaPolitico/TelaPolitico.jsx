@@ -6,7 +6,8 @@ import { GASTOS_FAKE } from "../Utils/DataFake";
 const TelaPolitico = ({ route }) => {
   //  console.log(route.params.chaveValor)
   /* console.log(route); */
-  const dadosPolitico = route.params.chaveValor;
+  const dadosPolitico = route?.params?.chaveValor;
+  console.log(dadosPolitico);
   /* console.log(dadosPolitico); */
   //console.log(dadosPolitico.uri.dados.gabinete.email);
 

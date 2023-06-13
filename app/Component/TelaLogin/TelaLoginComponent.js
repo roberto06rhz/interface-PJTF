@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { TextInput } from 'react-native-paper'
 
@@ -7,6 +7,12 @@ import { TextInput } from 'react-native-paper'
 const TelaLoginComponent = ({ navigation }) => {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const [mostrarSenha, setMostrarSenha] = useState(true);
+
+    const visibilidade = ()=>{
+        mostrarSenha === true? setMostrarSenha(false):setMostrarSenha(true);
+        
+    }
 
     return (
 
@@ -14,7 +20,10 @@ const TelaLoginComponent = ({ navigation }) => {
 
 
         <View style={estilo.container}>
+<View style={estilo.posImg}>
 
+            <Image style={estilo.img} source={require("../../img/imgLogo1.png")} />
+</View>
 
             <Text style={estilo.titulo}>PROCURALITICO</Text>
 
@@ -35,11 +44,12 @@ const TelaLoginComponent = ({ navigation }) => {
                 <TextInput
                     label='Senha'
                     placeholder=""
-                    right={<TextInput.Icon icon="eye" Color="red" />}
+                    right={<TextInput.Icon icon="eye" Color="red" onPress={visibilidade} />}
                     left={<TextInput.Icon icon="lock" />}
                     onChangeText={(texto) => setSenha(texto)}
-                    defaultValue={senha}>
-                </TextInput>
+                    defaultValue={senha}
+                    secureTextEntry= {mostrarSenha} /> 
+                
 
                 <View style={estilo.entraVisitCriar}>
                     <TouchableOpacity onPress={() => navigation.navigate("telaPoliticos")}>
@@ -84,7 +94,7 @@ const estilo = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         margin: 0,
-        top: -110
+        top: -75
     },
 
     title: {
@@ -113,7 +123,7 @@ const estilo = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         top: 27,
-        backgroundColor: '#19451F',
+        backgroundColor: 'black',
         margin: -10,
         marginTop: 0
     },
@@ -125,17 +135,30 @@ const estilo = StyleSheet.create({
     entrarVstt: {
         color: 'white',
         width: 145,
-      
+
     },
     criarCnt: {
         color: 'white',
         width: 110,
-       
+
     },
-    entraVisitCriar:{
-        padding:17,
-        flexDirection:'row',
-        justifyContent:'space-between'
+    entraVisitCriar: {
+        padding: 17,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    posImg:{
+        alignItems:'center',
+        top:-80,
+    },
+    img: {
+        width: 70,
+        height:100,
+        // left:165,
+        // display:'flex',
+        // justifyContent: 'center',
+        // alignItems:'center',
+        
     }
 })
 

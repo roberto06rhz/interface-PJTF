@@ -1,12 +1,10 @@
 import { useState } from "react";
-import {
-  SafeAreaView,
-  View,
-  TextInput,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-} from "react-native";
+
+import { SafeAreaView, View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { TextInput } from 'react-native-paper'
+
+
 
 const TelaLoginComponent = ({ navigation }) => {
   const [email, setEmail] = useState("");

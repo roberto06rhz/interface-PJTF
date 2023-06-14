@@ -62,11 +62,7 @@ const estilo = StyleSheet.create({
         height: '55%',
         width: '96%',
         marginLeft: 8
-        
-        
-        
-        
-
+               
     },
 
     titulo: {

@@ -19,7 +19,7 @@ const TelaPoliticos = ({ navigation }) => {
   //   uri: "https://dadosabertos.camara.leg.br/api/v2/deputados/220593",
   //   uriPartido:"https://dadosabertos.camara.leg.br/api/v2/partidos/37906",
   //   urlFoto: "https://media.licdn.com/dms/image/C4D03AQGMm74CmOz2lA/profile-displayphoto-shrink_800_800/0/1625110203335?e=2147483647&v=beta&t=mEqXE7NBHg80cMwCq222B4RgL9wQdDJCK6CsdB3kY4w"
-  // };
+  // };w
 
   useEffect(() => {
     (async () => {
